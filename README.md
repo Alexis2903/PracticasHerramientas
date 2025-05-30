@@ -90,3 +90,9 @@ sudo docker ps
 
 # 10. Acceder a la app desde el navegador
 http://<IP_PUBLICA>:8080
+
+Para listar con POST o en una pagina normal solo: http://localhost:8080/
+Para agregar un libro con: http://localhost:3000/libros
+Para eliminar un libro con delete: http://localhost:3000/libros/4
+Para buscar el libro con: http://localhost:3000/libros/4 
+Para editar libros con el metodo PATCH:http://localhost:3000/libros/3 
