@@ -92,8 +92,14 @@ CMD ["node", "index.js"]
 -Accede desde el navegador en http://<IP_PUBLICA>:8080
 
 # Endpoints de la API de libros
+---
 -Listar libros: http://localhost:8080/
+---
 -Agregar un libro (POST): http://localhost:3000/libros
+---
 -Eliminar un libro (DELETE): http://localhost:3000/libros/4
+---
 -Buscar un libro: http://localhost:3000/libros/4
+---
 -Editar un libro (PATCH): http://localhost:3000/libros/3
+---
