@@ -30,8 +30,8 @@
 -sudo systemctl status docker
 
 ### 7. Crear un archivo llamado Dockerfile dentro de la carpeta Backend con este contenido
--
-FROM node:20.10.0-alpine3.18
+
+"FROM node:20.10.0-alpine3.18
 -
 WORKDIR /app
 -
@@ -43,7 +43,7 @@ COPY index.js ./
 -
 EXPOSE 3000
 -
-CMD ["node", "index.js"]
+CMD ["node", "index.js"] "
 -
 ### 8. Construir la imagen Docker
 -sudo docker build -t node-hello .
@@ -78,13 +78,20 @@ CMD ["node", "index.js"]
 -sudo systemctl status docker
 
 ### 6. Crear un archivo llamado Dockerfile dentro de la carpeta Backend con este contenido
-FROM node:20.10.0-alpine3.18
+"FROM node:20.10.0-alpine3.18
+-
 WORKDIR /app
+-
 COPY package.json ./
+-
 RUN npm i
+-
 COPY index.js ./
+-
 EXPOSE 3000
-CMD ["node", "index.js"]
+-
+CMD ["node", "index.js"] "
+-
 
 ### 7. Construir la imagen Docker (se cambió el nombre a hello2)
 -sudo docker build -t node-hello2 .
