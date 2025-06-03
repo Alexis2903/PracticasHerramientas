@@ -1,10 +1,11 @@
-## PracticasHerramientas (1)
-npm create vite@latest
-Se crea el nombre
-Acedemos al cd de la carpeta y colocamos:
-npm run install 
-Para comprobar colocamos el comando:
-npm run dev 
+### PracticasHerramientas (1)
+Esta practica principalmente se nesecita diferentes herramienntas y se siguen los siguientes pasos:
+-npm create vite@latest
+-Se crea el nombre
+-Acedemos al cd de la carpeta y colocamos:
+-npm run install 
+-Para comprobar colocamos el comando:
+-npm run dev 
 
 ## Proyecto Node.js con Docker (2)
 
