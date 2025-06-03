@@ -30,14 +30,21 @@
 -sudo systemctl status docker
 
 ### 7. Crear un archivo llamado Dockerfile dentro de la carpeta Backend con este contenido
+-
 FROM node:20.10.0-alpine3.18
+-
 WORKDIR /app
+-
 COPY package.json ./
+-
 RUN npm i
+-
 COPY index.js ./
+-
 EXPOSE 3000
+-
 CMD ["node", "index.js"]
-
+-
 ### 8. Construir la imagen Docker
 -sudo docker build -t node-hello .
 
