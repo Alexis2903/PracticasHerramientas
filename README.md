@@ -7,6 +7,7 @@
 ### Para comprobar colocamos el comando:
 -npm run dev
 
+---
 # Proyecto Node.js con Docker (2)
 
 # Aplicación Node.js usando Docker en una instancia Ubuntu.
@@ -16,8 +17,7 @@
 -sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 
 ### 3. Agregar la clave GPG oficial de Docker
----
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 ### 4. Agregar el repositorio de Docker
 -sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
@@ -30,13 +30,13 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 -sudo systemctl status docker
 
 ### 7. Crear un archivo llamado Dockerfile dentro de la carpeta Backend con este contenido
-echo 'FROM node:20.10.0-alpine3.18
+FROM node:20.10.0-alpine3.18
 WORKDIR /app
 COPY package.json ./
 RUN npm i
 COPY index.js ./
 EXPOSE 3000
-CMD ["node", "index.js"]' > Dockerfile
+CMD ["node", "index.js"]
 
 ### 8. Construir la imagen Docker
 -sudo docker build -t node-hello .
@@ -70,13 +70,13 @@ CMD ["node", "index.js"]' > Dockerfile
 -sudo systemctl status docker
 
 ### 6. Crear un archivo llamado Dockerfile dentro de la carpeta Backend con este contenido
-echo 'FROM node:20.10.0-alpine3.18
+FROM node:20.10.0-alpine3.18
 WORKDIR /app
 COPY package.json ./
 RUN npm i
 COPY index.js ./
 EXPOSE 3000
-CMD ["node", "index.js"]' > Dockerfile
+CMD ["node", "index.js"]
 
 ### 7. Construir la imagen Docker (se cambió el nombre a hello2)
 -sudo docker build -t node-hello2 .
@@ -88,11 +88,11 @@ CMD ["node", "index.js"]' > Dockerfile
 -sudo docker ps
 
 ### 10. Acceder a la app desde el navegador
-echo "Accede desde el navegador en http://<IP_PUBLICA>:8080"
+-Accede desde el navegador en http://<IP_PUBLICA>:8080
 
 # Endpoints de la API de libros
--"Listar libros: http://localhost:8080/"
--"Agregar un libro (POST): http://localhost:3000/libros"
--"Eliminar un libro (DELETE): http://localhost:3000/libros/4"
--"Buscar un libro: http://localhost:3000/libros/4"
--"Editar un libro (PATCH): http://localhost:3000/libros/3"
+-Listar libros: http://localhost:8080/
+-Agregar un libro (POST): http://localhost:3000/libros
+-Eliminar un libro (DELETE): http://localhost:3000/libros/4
+-Buscar un libro: http://localhost:3000/libros/4
+-Editar un libro (PATCH): http://localhost:3000/libros/3
