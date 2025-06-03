@@ -50,6 +50,7 @@ CMD ["node", "index.js"]
 ### 11. Acceder a la app desde el navegador
 -echo "Accede desde el navegador en http://<IP_PUBLICA>:8080"
 
+---
 # Proyecto Node.js con Docker Practica libros (3)
 
 ### 1. Actualizar e instalar dependencias necesarias en la carpeta de libros
